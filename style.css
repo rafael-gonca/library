@@ -1,0 +1,376 @@
+html,
+body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(43, 43, 43);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    height: 100vh;
+}
+
+.logo {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(43, 43, 43);
+}
+
+.logo img {
+    width: 60px;
+    height: 75px;
+}
+
+.logo div {
+    font-family: 'Bebas Neue';
+    font-size: 50px;
+    font-weight: 400;
+    color: #e3b261;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #e3b261;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+    padding-top: 2rem;
+}
+
+.sidebar div svg {
+    height: 35px;
+    fill: rgb(43, 43, 43);
+}
+
+.sidebar > div {
+    display: flex;
+    align-items: center;
+    color: rgb(43, 43, 43);
+    font-size: 1.5rem;
+    font-family: Roboto;
+    font-weight: 600;
+    gap: 10px;
+    margin-top: 0.9rem;
+    width: 24rem;
+    padding: 0.1rem;
+    border-radius: 10px;
+}
+
+.sidebar > div:hover {
+    background-color: #c59a54;
+    cursor: pointer;
+}
+
+.head {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.head-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.head-left img {
+    height: 30px;
+}
+
+.head-left input {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    width: 900px;
+    height: 40px;
+    background-color: #eee;
+    padding-left: 10px;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.head-left input:hover {
+    background-color: #c5c5c5;
+}
+
+.head-left button {
+    height: 40px;
+    width: 100px;
+    margin-left: 2rem;
+    border: none;
+    border-radius: 0.5em;
+    font-family: 'Bebas Neue';
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    color: rgb(43, 43, 43);
+    background-color: #c59a54;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.head-left button:hover {
+    cursor: pointer;
+    background-color: #946e30;
+    color: #eee;
+}
+
+.head-left button:active {
+    background-color: #c59f61;
+}
+
+.profile img {
+    height: 72px;
+    width: 69px;
+}
+
+.main {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: #464646;
+    display: grid;
+    grid-template-rows: 1fr 14fr;
+    padding: 0.7rem;
+}
+
+.main > .title {
+    color: #e3b261;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.title svg {
+    fill: rgb(227, 178, 97);
+}
+
+.striked {
+  text-decoration: line-through;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16em, 16em));
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #c59a54;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 20px;
+    color: rgb(43, 43, 43);
+    font-family: 'Bebas Neue';
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.card .name {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.card .author {
+    font-size: 1.8rem;
+}
+
+.card .pages {
+    font-size: 1.3rem;
+}
+
+.card .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reads label {
+    font-size: 20px;
+}
+
+.card .read {
+    transform:  scale(1.5);
+    accent-color: rgb(43, 43, 43);
+}
+
+.card button {
+    color: rgb(43, 43, 43);
+    border: none;
+    border-radius: 0.5em;
+    font-family: Roboto;
+    letter-spacing: 1px;
+    font-weight: 800;
+    width: 6em;
+}
+
+.card button:hover {
+    background-color: rgb(43, 43, 43);
+    color: white;
+    cursor: pointer;
+}
+
+.card button:active {
+    background-color: #868686;
+}
+
+.footer {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: #e3b261;
+}
+
+a:visited {
+    color: #e3b261;
+}
+
+h1 {
+    color: #e3b261;
+}
+
+dialog h1 {
+    color: rgb(43, 43, 43);
+}
+
+dialog {
+    height: 25rem;
+    width: 25rem;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    font-family: 'Bebas Neue';
+    letter-spacing: 2px;
+    color: rgb(43, 43, 43);
+    background-color: #c59f61;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+dialog input[type='text'],
+dialog input[type='number'] {
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-family: 'Bebas Neue';
+    letter-spacing: 1px;
+    font-size: 20px;
+    outline: none;
+}
+
+dialog input[type='text']:hover,
+dialog input[type='text']:focus,
+dialog input[type='number']:hover,
+dialog input[type='number']:focus {
+    background-color: #eee;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin-left: -15px;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+button[type='submit'],
+button[class='cancel'] {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    align-self: end;
+    background-color: rgb(43, 43, 43);
+    color: #eee;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button[type='submit']:hover {
+    cursor: pointer;
+    background-color: rgb(71, 71, 71);
+    color: #eee;
+}
+
+button[class='cancel']:hover {
+    cursor: pointer;
+    background-color: rgb(134, 33, 33);
+    color: #eee;
+}
+
+button[type='submit']:active {
+    background-color: #9b9b9b;
+}
+
+button[class='cancel']:active {
+    background-color: #b16d6d;
+}
+
+button[class='cancel'] {
+    align-self: start;
+    margin-top: -30px;
+    background-color: rgb(143, 55, 55);
+    margin-left: 70px;
+}
+
+button[type='submit'] {
+    margin-right: 70px;
+}
