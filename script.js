@@ -60,11 +60,12 @@ function addNewCard() {
     const input = document.createElement('input')
     input.type = 'checkbox'
     input.name = 'read'
-    input.classList.add('read')
+    input.id = 'read'
     const label = document.createElement('label')
-    label.setAttribute('for', input.className)
+    label.setAttribute('for', input.id)
     label.textContent = 'Read'
     divReads.appendChild(input)
+    divReads.appendChild(label)
 
     if (obj.read === 'yes') {
         input.checked = true;
