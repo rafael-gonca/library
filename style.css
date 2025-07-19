@@ -204,6 +204,7 @@ body {
 
 .reads label {
     font-size: 20px;
+    margin-left: 3px;
 }
 
 .card #read {
