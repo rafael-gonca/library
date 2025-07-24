@@ -118,8 +118,6 @@ form.addEventListener('submit', (e) => {
     form.reset();
 });
 
-
-
 const cards = document.querySelector('.cards');
 
 cards.addEventListener('click', (e) => {
@@ -129,7 +127,6 @@ cards.addEventListener('click', (e) => {
         myLibrary = myLibrary.filter(book => book.id !== id)
     }
 });
-
 
 cards.addEventListener('change', (e) => {
   if (!e.target.matches('.read'));
