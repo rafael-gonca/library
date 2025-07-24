@@ -8,13 +8,34 @@ let myLibrary = [{
 
 addNewCard()
 
-function Book(name, author, pages, read, id) {
-    this.name = name,
-    this.author = author,
-    this.pages = pages,
-    this.read = read 
-    this.id = id
-    this.info = () => ({name, author, pages, read, id})
+// function Book(name, author, pages, read, id) {
+//     this.name = name,
+//     this.author = author,
+//     this.pages = pages,
+//     this.read = read 
+//     this.id = id
+//     this.info = () => ({name, author, pages, read, id})
+// }
+
+class Book {
+    constructor(name, author, pages, read, id) {
+        this.name = name,
+        this.author = author,
+        this.pages = pages,
+        this.read = read,
+        this.id = id
+    }
+
+    info() {
+        return {
+            name: this.name,
+            author: this.author,
+            pages: this.pages,
+            read: this.read,
+            id: this.id
+        }
+    }
+
 }
 
 function addBookToLibrary(name, author, pages, read) {
@@ -81,13 +102,6 @@ function addNewCard() {
 
 }
 
-
-// addBookToLibrary('The Big Castle', 'James Web', '368', 'yes')
-// addBookToLibrary('The Big Castle 2', 'James Web', '567', 'no')
-// alert(myLibrary)
-
-
-
 const btnNewCard = document.querySelector('.new-card')
 const btnCancel  = document.querySelector('.cancel')
 const modal = document.querySelector('dialog')
@@ -124,9 +138,6 @@ cards.addEventListener('click', (e) => {
         myLibrary = myLibrary.filter(book => book.id !== id)
     }
 });
-
-
-
 
 
 cards.addEventListener('change', (e) => {
