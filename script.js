@@ -114,6 +114,12 @@ form.addEventListener('submit', (e) => {
     const read = document.querySelector('input[name="read"]:checked').value;
 
     addBookToLibrary(name, author, pages, read);
+
+    const bookName = document.querySelector('#book-name');
+    const bookAuthor = document.querySelector('#book-author');
+    bookName.placeholder = ''
+    bookAuthor.placeholder = ''
+
     modal.close();
     form.reset();
 });
@@ -141,3 +147,38 @@ cards.addEventListener('change', (e) => {
     topSection.classList.remove('striked');
   }
 });
+
+const formValidation = (function () {
+    const bookName = document.querySelector('#book-name');
+    bookName.addEventListener('input', (event) => {
+        if (bookName.validity.valueMissing) {
+            bookName.placeholder = 'You need to enter a book name.'
+        } else if (bookName.validity.tooShort) {
+            bookName.setCustomValidity('The title must have more than 1 character.')
+        } else {
+            bookName.setCustomValidity('')
+        }
+    });
+
+    const bookAuthor = document.querySelector('#book-author');
+    bookAuthor.addEventListener('input', (event) => {
+        if (bookAuthor.validity.valueMissing) {
+            bookAuthor.placeholder = 'You need to enter an author name.'
+        } else if (bookAuthor.validity.tooShort) {
+            bookAuthor.setCustomValidity(`The author's name must have more than 1 character.`)
+        } else {
+            bookAuthor.setCustomValidity('')
+        }
+    })
+
+    const bookPages = document.querySelector('#book-pages');
+    bookPages.addEventListener('input', (event) => {
+        if (bookPages.validity.valueMissing) {
+            bookPages.placeholder = 'You need to enter a pages number.'
+        } else if (bookPages.validity.rangeUnderflow) {
+            bookPages.setCustomValidity(`The number of pages must be greater than or equal to 10.`)
+        } else {
+            bookPages.setCustomValidity('')
+        }
+    })
+})();

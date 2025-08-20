@@ -90,18 +90,18 @@
 
         <form id="book-form" action="" method="dialog">
             <div>
-                <label for="book-name">Book Name</label required>
-                <input type="text" id="book-name">
+                <label for="book-name">Book Name</label>
+                <input type="text" id="book-name" minlength="2" required>
             </div>
 
             <div>
-                <label for="book-author">Author</label required>
-                <input type="text" id="book-author">
+                <label for="book-author">Author</label>
+                <input type="text" id="book-author" minlength="2" required>
             </div>
 
             <div>
                 <label for="book-pages">Pages</label>
-                <input type="number" id="book-pages" min="1" required>
+                <input type="number" id="book-pages" min="10" value="10" required>
             </div>
 
             <fieldset>
